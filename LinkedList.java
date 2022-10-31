@@ -57,14 +57,36 @@ public class LinkedList {
     }
 
     public String toString() {
-        return "toString()";
+        String str = "";
+        Node iterator = this.head;
+        while (iterator != null) {
+            if (iterator.getName().charAt(0) != '.') {
+                str += iterator.getName() + " ";
+            }
+            iterator = iterator.getNext();
+        }
+        return str;
     }
 
     public String toStringAll() {
-        return "toStringAll()";
+        String str = "";
+        Node iterator = this.head;
+        while (iterator != null) {
+            if (iterator.getName().charAt(0) != '.') {
+                str = iterator.getName() + " " + str;
+            }
+            iterator = iterator.getNext();
+        }
+        return str;
     }
 
     public String toStringReverse() {
-        return "toStringReverse()";
+        String str = "";
+        Node iterator = this.head;
+        while (iterator != null) {
+            str = iterator.getName() + " " + str;
+            iterator = iterator.getNext();
+        }
+        return str;
     }
 }
