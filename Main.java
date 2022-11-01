@@ -10,7 +10,5 @@ public class Main {
             String input = scanner.nextLine();
             HelperFunctions.conductCommand(input, tree);
         }
-        
-        
     }
 }
